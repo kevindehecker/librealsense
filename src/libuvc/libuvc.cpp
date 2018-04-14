@@ -378,10 +378,11 @@ namespace librealsense
               res = uvc_open2(_device, &_device_handle, _interface);
 
               if (res < 0) {
-                  uvc_unref_device(_device);
-                  _device = NULL;
-                  throw linux_backend_exception(
-                    "Could not open device.");
+                  return;
+                  //uvc_unref_device(_device);
+                  //_device = NULL;
+                  //throw linux_backend_exception(
+                  //  "Could not open device.");
               }
 
               for(auto ct = uvc_get_input_terminals(_device_handle);
