@@ -49,6 +49,7 @@ adb shell su
 ```shell
 cp -R /storage/emulated/legacy/lrs_binaries /data/
 cd /data/lrs_binaries
+export LD_LIBRARY_PATH=/data/lrs_binaries
 chown root:root *
 chmod +x *
 ```
